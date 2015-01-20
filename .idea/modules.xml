@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/PycharmProjects/.idea/PycharmProjects.iml" filepath="$USER_HOME$/PycharmProjects/.idea/PycharmProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/twitter_feed.iml" filepath="$PROJECT_DIR$/.idea/twitter_feed.iml" />
     </modules>
   </component>

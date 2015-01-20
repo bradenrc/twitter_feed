@@ -33,8 +33,8 @@ class StdOutListener(StreamListener):
         timestamp = datetime.fromtimestamp(time.time())
         str_timestamp = str(timestamp.strftime("%m_%d_%Y-%H_%M_%S"))
         user_name = j["user"]["screen_name"]
-        of = open("../data/" + user_name + str_timestamp + ".txt", "w")
-        out_file = "/mapr/" + cluster_name + "/user/mapr/data3/output.txt"
+        of = open("../data/" + user_name + str_timestamp + ".json", "w")
+        out_file = "/mapr/" + cluster_name + "/user/mapr/data3/output.json"
         off = open(out_file, "a")
 
         es = {}

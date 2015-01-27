@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b48abdd6-e6af-4b1c-972c-ad7c11fe8131" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html_template.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tohtml.py" afterPath="$PROJECT_DIR$/tohtml.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="twitter_feed.iws" />
@@ -415,7 +413,11 @@
       <created>1422318663345</created>
       <updated>1422318663345</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="included url to profile image, fixed type in filter">
+      <created>1422333846505</created>
+      <updated>1422333846505</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">

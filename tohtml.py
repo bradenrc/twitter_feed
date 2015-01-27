@@ -9,7 +9,10 @@ from datetime import datetime, timedelta
 import os
 import pprint
 #import elasticsearch
+import HTMLParser
 
+
+html_parser = HTMLParser.HTMLParser()
 
 consumer_key="h9ZHlkz53jYPWFoxSZNoFtuf9"
 consumer_secret="I4DEEOiNbR1OTO0UM5j5OsyLv7mcFAOySu6U4OHuVg85T0CpFm"
@@ -17,6 +20,17 @@ access_token="23088031-k7lxpDWd9o5lcqrnkjZfbNsVNepGoZmNR6AcbrpJ4"
 access_token_secret="TDbgAuKjfA2hjnq4I0cWWI16nNqq44vQOGHt10DUZhjpt"
 cluster_name="maprdemo"
 
+def html_decode(s):
+    htmlCodes = [("'", '&#39;'),('"', '&quot;'),('>', '&gt;'),('<', '&lt;'),('&', '&amp;')]
+    for code in htmlCodes:
+        s = s.replace(code[0], code[1])
+    return s
+
+def format_html_row(jsonin):
+#    jsonin = unicode(jsonin)
+    tweet = str(jsonin["tweet"])
+    print type(tweet)
+    return "[\'{}\',\'<img src=\"{}\"/>\',\'{}\',\'{}\']".format(jsonin["timestamp"], jsonin["image_url"], jsonin["username"],unicode(tweet))
 
 
 class StdOutListener(StreamListener):
@@ -44,6 +58,9 @@ class StdOutListener(StreamListener):
         es["timestamp"] = str(datetime.fromtimestamp(time.time()).isoformat())
         es["image_url"] = j["user"]["profile_image_url"]
         es_j = json.dumps(es)
+
+        print format_html_row(es)
+
         #
         # of.write(unicode(data)) #write individual file
         # off.writelines(unicode(data)) #append to big file
@@ -58,7 +75,7 @@ class StdOutListener(StreamListener):
         #     )
 
         #print output to console
-        pprint.pprint(es)
+        #pprint.pprint(es)
         print "*" * 20
 
         return True

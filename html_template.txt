@@ -1,0 +1,40 @@
+{'id': '559870276364939264',
+ 'image_url': u'http://pbs.twimg.com/profile_images/555527089441755136/A73Qf7uM_normal.jpeg',
+ 'timestamp': '2015-01-26T16:27:36.411000',
+ 'tweet': u'Yo @moosebread72  hilarious segment on NFL Total Access "oh, he wants it more than you do" lmaoo',
+ 'username': u'thatdudebonner'}
+
+ <img src="http://pbs.twimg.com/profile_images/555527089441755136/A73Qf7uM_normal.jpeg" />
+
+ <html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["table"]});
+      google.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'id');
+        data.addColumn('string', 'image_url');
+        data.addColumn('date', 'timestamp');
+        data.addColumn('string', 'tweet');
+        data.addColumn('string', 'username');
+        data.addRows([
+
+
+['559870276364939264', 'http://pbs.twimg.com/profile_images/555527089441755136/A73Qf7uM_normal.jpeg', '2015-01-26T16:27:36.411000', 'Yo @moosebread72  hilarious segment on NFL Total Access "oh, he wants it more than you do" lmaoo', 'thatdudebonner']
+
+
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true});
+      }
+    </script>
+  </head>
+  <body>
+    <div id="table_div"></div>
+  </body>
+</html>

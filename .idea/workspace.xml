@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b48abdd6-e6af-4b1c-972c-ad7c11fe8131" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streaming2.py" afterPath="$PROJECT_DIR$/streaming2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html_template.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tohtml.py" afterPath="$PROJECT_DIR$/tohtml.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="twitter_feed.iws" />
@@ -46,24 +47,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="streaming2.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="streaming2.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/streaming2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.049698796" vertical-offset="645" max-vertical-offset="1309">
-              <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1309">
+              <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tohtml.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tohtml.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tohtml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1462">
-              <caret line="45" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.46234939" vertical-offset="220" max-vertical-offset="1751">
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
               <folding>
                 <element signature="e#19#62#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="html_template.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html_template.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="765">
+              <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,9 +95,10 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$USER_HOME$/PycharmProjects/test/test2.py" />
         <option value="$USER_HOME$/PycharmProjects/test/sec.py" />
-        <option value="$PROJECT_DIR$/tohtml.py" />
         <option value="$PROJECT_DIR$/streaming.py" />
         <option value="$PROJECT_DIR$/streaming2.py" />
+        <option value="$PROJECT_DIR$/html_template.txt" />
+        <option value="$PROJECT_DIR$/tohtml.py" />
       </list>
     </option>
   </component>
@@ -399,7 +411,11 @@
       <created>1422318523291</created>
       <updated>1422318523291</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="included url to profile image, fixed type in filter">
+      <created>1422318663345</created>
+      <updated>1422318663345</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -577,16 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tohtml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1462">
-          <caret line="45" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#19#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/streaming.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="1241">
@@ -597,9 +603,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/streaming2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.049698796" vertical-offset="645" max-vertical-offset="1309">
-          <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1309">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html_template.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="765">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tohtml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46234939" vertical-offset="220" max-vertical-offset="1751">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding>
+            <element signature="e#19#62#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

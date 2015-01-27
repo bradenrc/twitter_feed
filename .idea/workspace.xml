@@ -417,7 +417,11 @@
       <created>1422333846505</created>
       <updated>1422333846505</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="included url to profile image, fixed type in filter">
+      <created>1422333852585</created>
+      <updated>1422333852585</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">

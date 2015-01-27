@@ -8,7 +8,7 @@ import time
 from datetime import datetime, timedelta
 import os
 import pprint
-import elasticsearch
+#import elasticsearch
 
 
 consumer_key="h9ZHlkz53jYPWFoxSZNoFtuf9"
@@ -33,33 +33,34 @@ class StdOutListener(StreamListener):
         timestamp = datetime.fromtimestamp(time.time())
         str_timestamp = str(timestamp.strftime("%m_%d_%Y-%H_%M_%S"))
         user_name = j["user"]["screen_name"]
-        of = open("../data/" + user_name + str_timestamp + ".json", "w")
-        out_file = "/mapr/" + cluster_name + "/user/mapr/data3/output.json"
-        off = open(out_file, "a")
-
+        # of = open("../data/" + user_name + str_timestamp + ".json", "w")
+        # out_file = "/mapr/" + cluster_name + "/user/mapr/data3/output.json"
+        # off = open(out_file, "a")
+        #
         es = {}
         es["id"] = str(j["id"]).replace("'","").replace("\"", "")
         es["username"] = user_name
         es["tweet"] = j["text"]
         es["timestamp"] = str(datetime.fromtimestamp(time.time()).isoformat())
+        es["image_url"] = j["user"]["profile_image_url"]
         es_j = json.dumps(es)
+        #
+        # of.write(unicode(data)) #write individual file
+        # off.writelines(unicode(data)) #append to big file
+        #
+        # #submit to elasticsearch
+        # es_api = elasticsearch.Elasticsearch()
+        # es_api.index(
+        #     index="tweets",
+        #     doc_type="boeing",
+        #     id=es["id"],
+        #     body=es
+        #     )
 
-        of.write(unicode(data)) #write individual file
-        off.writelines(unicode(data)) #append to big file
-
-        #submit to elasticsearch
-        es_api = elasticsearch.Elasticsearch() 
-        es_api.index(
-            index="tweets",
-            doc_type="boeing",
-            id=es["id"],
-            body=es
-            )
-			
         #print output to console
         pprint.pprint(es)
         print "*" * 20
-	
+
         return True
 
     def on_error(self, status):
@@ -73,6 +74,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
     stream.filter(track=['nfl', '49ers', 'cardinals', 'rams', 'seahawks'])
+
 
 
 

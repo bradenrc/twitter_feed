@@ -42,6 +42,7 @@ class StdOutListener(StreamListener):
         es["username"] = user_name
         es["tweet"] = j["text"]
         es["timestamp"] = str(datetime.fromtimestamp(time.time()).isoformat())
+        es["image_url"] = j["user"]["profile_image_url"]
         es_j = json.dumps(es)
 
         of.write(unicode(data)) #write individual file

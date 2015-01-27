@@ -28,9 +28,21 @@ def html_decode(s):
 
 def format_html_row(jsonin):
 #    jsonin = unicode(jsonin)
-    tweet = str(jsonin["tweet"])
-    print type(tweet)
-    return "[\'{}\',\'<img src=\"{}\"/>\',\'{}\',\'{}\']".format(jsonin["timestamp"], jsonin["image_url"], jsonin["username"],unicode(tweet))
+    tweet = str(jsonin["tweet"]).encode('utf-8')
+    return "[\'{}\',\'<img src=\"{}\"/>\',\'{}\',\'{}\']".format(jsonin["timestamp"], jsonin["image_url"], jsonin["username"],tweet)
+
+
+    def on_error(self, status):
+        print status
+
+
+def create_report(data):
+    template = open("html_template.txt", "r").read()
+    new = template.replace("##data##", data)
+    output = open("tweet_report.html", "w")
+    output.writelines(new)
+
+
 
 
 class StdOutListener(StreamListener):
@@ -59,7 +71,7 @@ class StdOutListener(StreamListener):
         es["image_url"] = j["user"]["profile_image_url"]
         es_j = json.dumps(es)
 
-        print format_html_row(es)
+        #print format_html_row(es)
 
         #
         # of.write(unicode(data)) #write individual file
@@ -75,7 +87,10 @@ class StdOutListener(StreamListener):
         #     )
 
         #print output to console
-        #pprint.pprint(es)
+        pprint.pprint(es)
+        create_report(es.values().__str__())
+        #print "[\'{}\',\'<img src=\"{}\"/>\',\'{}\',\'{}\']".format(es["timestamp"], es["image_url"], es["username"],es["tweet"])
+
         print "*" * 20
 
         return True

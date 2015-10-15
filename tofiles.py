@@ -13,7 +13,13 @@ consumer_key="h9ZHlkz53jYPWFoxSZNoFtuf9"
 consumer_secret="I4DEEOiNbR1OTO0UM5j5OsyLv7mcFAOySu6U4OHuVg85T0CpFm"
 access_token="23088031-k7lxpDWd9o5lcqrnkjZfbNsVNepGoZmNR6AcbrpJ4"
 access_token_secret="TDbgAuKjfA2hjnq4I0cWWI16nNqq44vQOGHt10DUZhjpt"
-cluster_name="maprdemo"
+
+g_file = open("gallo.txt", "r")
+
+g_list = []
+
+for row in g_file:
+    g_list.append(row.replace("\n", "").encode('utf-8', errors="ignore"))
 
 
 
@@ -31,7 +37,7 @@ class StdOutListener(StreamListener):
         timestamp = datetime.fromtimestamp(time.time())
         str_timestamp = str(timestamp.strftime("%m_%d_%Y-%H_%M_%S"))
         user_name = j["user"]["screen_name"]
-        of = open("/temp/twitter_data/" + user_name + str_timestamp + ".json", "w")
+        of = open("/temp/gallo_twitter_data/" + user_name + str_timestamp + ".json", "w")
         of.write(unicode(data)) #write individual file
 
         #print output to console
@@ -50,7 +56,8 @@ if __name__ == '__main__':
     auth.set_access_token(access_token, access_token_secret)
 
     stream = Stream(auth, l)
-    stream.filter(track=['nfl', '49ers', 'cardinals', 'rams', 'seahawks'])
+    stream.filter(track=['apothic', 'boonesfarm', 'barefootcellars', 'columbiawinery', 'coveyrun'])
+#    stream.filter(track=g_list)
 
 
 

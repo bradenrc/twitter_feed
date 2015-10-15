@@ -1,9 +1,3 @@
-{'id': '559870276364939264',
- 'image_url': u'http://pbs.twimg.com/profile_images/555527089441755136/A73Qf7uM_normal.jpeg',
- 'timestamp': '2015-01-26T16:27:36.411000',
- 'tweet': u'Yo @moosebread72  hilarious segment on NFL Total Access "oh, he wants it more than you do" lmaoo',
- 'username': u'thatdudebonner'}
-
  <img src="http://pbs.twimg.com/profile_images/555527089441755136/A73Qf7uM_normal.jpeg" />
 
  <html>
